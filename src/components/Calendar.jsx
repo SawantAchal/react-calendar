@@ -109,7 +109,7 @@ const Calendar = ({ filter }) => {
     return (
         <div className="mt-8">
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">EVENTS</h2>
-            <ul className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
+            <ul className="flex flex-col gap-4">
                 {
                     filteredEvents.length > 0 ? (
                         filteredEvents.map((event) => (

@@ -202,8 +202,8 @@ const EventForm = () => {
     return (
         <>
             <main className="flex justify-center items-center">
-                <div className="mb-6 p-4 bg-white shadow rounded">
-                    <h2 className="text-xl font-bold mb-4">{editingEvent ? 'Edit Event' : 'Add Event'}</h2>
+                <div className="mb-6 p-4 bg-white shadow rounded w-96">
+                    <h2 className="text-xl font-bold mb-4 text-center">{editingEvent ? 'Edit Event' : 'Add Event'}</h2>
                     <form onSubmit={handleSubmit}>
                         <input name="title" value={form.title} onChange={handleChange} placeholder="Event Title" required className="block w-full p-2 mb-4 border border-gray-300 rounded" />
                         <input name="date" type="date" value={form.date} min={today} onChange={handleChange} required className="block w-full p-2 mb-4 border border-gray-300 rounded" />
