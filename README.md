@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Event Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React-based event management application that allows users to create, edit, delete, and filter events. The application also provides a calendar view to display all events.
+Live : https://react-calendar-indol.vercel.app/
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Events**: Create new events with a title, date, category (Work/Personal), and description.
+- **Edit Events**: Update existing events with new details.
+- **Delete Events**: Remove events that are no longer needed.
+- **Filter Events**: Filter events by category (Work/Personal/All).
+- **View Event Details**: Click on an event to view its details in a modal.
 
-### `npm start`
+## Installation and Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   \`\`\`
+   git clone https://github.com/SawantAchal/react-calendar.git
+   \`\`\`
 
-### `npm test`
+2. **Navigate to the project directory:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   \`\`\`
+   cd event-management-app
+   \`\`\`
 
-### `npm run build`
+3. **Install dependencies:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   \`\`\`
+   npm install
+   \`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the development server:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   \`\`\`
+   npm start
+   \`\`\`
 
-### `npm run eject`
+5. **Open the app in your browser:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   The application will be running on \`http://localhost:3000\`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. EventForm.js
+This component is used to create and edit events. The form includes fields for the event title, date, category, and description. Depending on whether an event is being edited or a new one is being added, the submit button will display \"Update\" or \"Save.\"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2. Calendar.js
+This component displays the list of events and allows users to filter them by category. Users can also delete events or click to edit them.
 
-## Learn More
+### 3. EventContext.js
+This file contains the context for managing the global state of events. It provides methods to add, edit, delete, and retrieve events.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. AppContent.js
+This is the main component that ties everything together, rendering the \`EventForm\` and \`Calendar\` components and managing the event filter.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. App.js
+This file sets up the routes for the application, rendering \`AppContent\` as the main route.
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Enhanced Calendar View**: Add a calendar view that displays events on specific dates.
+- **Event Reminders**: Implement a feature to set reminders for upcoming events.
+- **Event Sharing**: Allow users to share event details with others via email or social media.
